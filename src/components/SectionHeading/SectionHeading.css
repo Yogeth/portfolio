@@ -1,0 +1,30 @@
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 44px;
+}
+
+.section-heading__number {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-teal);
+  flex-shrink: 0;
+}
+
+.section-heading__title {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.section-heading__line {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+  margin-left: 8px;
+}

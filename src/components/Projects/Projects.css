@@ -1,0 +1,112 @@
+.projects__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Card ─────────────────────────────────────────── */
+.project-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.project-card:hover {
+  border-color: var(--color-border-hover);
+  transform: translateY(-3px);
+}
+
+/* ── Header ───────────────────────────────────────── */
+.project-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.project-card__badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.project-card__type {
+  background: rgba(45, 212, 191, 0.12);
+  color: var(--color-teal);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.project-card__period {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.project-card__name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.project-card__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(45, 212, 191, 0.12), rgba(99, 102, 241, 0.18));
+  border: 1px solid rgba(45, 212, 191, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+/* ── Bullet points ────────────────────────────────── */
+.project-card__points {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.project-card__point {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+}
+
+.project-card__bullet {
+  color: var(--color-teal);
+  font-size: 11px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* ── Tech tags ────────────────────────────────────── */
+.project-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-tag {
+  background: var(--color-indigo-dim);
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  color: #a5b4fc;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+}

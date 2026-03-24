@@ -1,0 +1,213 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 32px 60px;
+  max-width: var(--section-max-width);
+  margin: 0 auto;
+}
+
+/* ── Inner layout ─────────────────────────────────── */
+.hero__inner {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  width: 100%;
+}
+
+/* ── Avatar ───────────────────────────────────────── */
+.hero__avatar {
+  flex-shrink: 0;
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(45, 212, 191, 0.14), rgba(99, 102, 241, 0.14));
+  border: 2px solid rgba(45, 212, 191, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 60px rgba(45, 212, 191, 0.1);
+}
+
+.hero__avatar-emoji {
+  font-size: 58px;
+  line-height: 1;
+}
+
+.hero__status-dot {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #22c55e;
+  border: 2px solid var(--color-bg);
+}
+
+/* ── Content ──────────────────────────────────────── */
+.hero__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero__badge {
+  display: inline-block;
+  background: var(--color-teal-dim);
+  border: 1px solid rgba(45, 212, 191, 0.25);
+  color: var(--color-teal);
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hero__name {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  margin-bottom: 10px;
+}
+
+.hero__name--accent {
+  color: var(--color-teal);
+}
+
+.hero__title {
+  font-size: clamp(15px, 2vw, 20px);
+  color: var(--color-indigo);
+  font-weight: 500;
+  margin-bottom: 18px;
+  min-height: 28px;
+}
+
+.hero__cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.hero__summary {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  max-width: 520px;
+  margin-bottom: 24px;
+}
+
+/* ── Contact bar ──────────────────────────────────── */
+.hero__contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.hero__contact-item {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ── CTA buttons ──────────────────────────────────── */
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--transition);
+  border: 1px solid;
+}
+
+.hero__cta-btn--ghost {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-primary);
+}
+
+.hero__cta-btn--ghost:hover {
+  border-color: var(--color-teal);
+  color: var(--color-teal);
+}
+
+.hero__cta-btn--indigo {
+  background: var(--color-indigo-dim);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: #a5b4fc;
+}
+
+.hero__cta-btn--indigo:hover {
+  background: rgba(99, 102, 241, 0.22);
+}
+
+/* ── Scroll hint ──────────────────────────────────── */
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.35;
+}
+
+.hero__scroll-hint span {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(to bottom, var(--color-teal), transparent);
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .hero__contact {
+    justify-content: center;
+  }
+
+  .hero__cta {
+    justify-content: center;
+  }
+
+  .hero__summary {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

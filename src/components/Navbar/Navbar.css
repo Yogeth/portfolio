@@ -1,0 +1,90 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background var(--transition), border-color var(--transition), backdrop-filter var(--transition);
+}
+
+.navbar--scrolled {
+  background: rgba(10, 14, 26, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom-color: var(--color-border);
+}
+
+/* ── Logo ─────────────────────────────────────────── */
+.navbar__logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--color-teal);
+  letter-spacing: -0.02em;
+}
+
+.navbar__logo-dot {
+  color: var(--color-text-primary);
+}
+
+/* ── Links ────────────────────────────────────────── */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar__link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  transition: color var(--transition);
+  padding: 4px 0;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--color-teal);
+}
+
+/* ── Hire button ──────────────────────────────────── */
+.navbar__hire-btn {
+  background: var(--color-teal);
+  color: #0a0e1a;
+  padding: 7px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.navbar__hire-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 640px) {
+  .navbar {
+    padding: 14px 20px;
+  }
+
+  .navbar__link {
+    display: none;
+  }
+}
