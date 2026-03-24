@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <p className="footer__line">
-        Built with <span className="footer__heart">♥</span> by{' '}
+        Built with <span className="footer__heart"></span> by{' '}
         <span className="footer__name">{resume.name}</span>
       </p>
       <p className="footer__meta">
